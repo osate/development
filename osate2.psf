@@ -15,6 +15,7 @@
 <project reference="1.0,git@github.com:smaccm/smaccm.git,sei_merge,fm-workbench/resolute/com.rockwellcollins.atc.resolute.schedule.analysis"/>
 <project reference="1.0,git@github.com:smaccm/smaccm.git,sei_merge,fm-workbench/resolute/com.rockwellcollins.atc.resolute.source.feature"/>
 <project reference="1.0,git@github.com:smaccm/smaccm.git,sei_merge,fm-workbench/resolute/com.rockwellcollins.atc.resolute.ui"/>
+<project reference="1.0,ssh://git@github.com/nasa/CertWare.git,master,net.certware.sacm"/>
 <project reference="1.0,git@github.com:osate/osate2-core.git,develop,org.osate.aadl2"/>
 <project reference="1.0,git@github.com:osate/osate2-core.git,develop,org.osate.aadl2.edit"/>
 <project reference="1.0,git@github.com:osate/ErrorModelV2.git,develop,org.osate.aadl2.errormodel.analysis"/>
@@ -66,6 +67,7 @@
 <project reference="1.0,git@github.com:osate/osate2-plugins.git,develop,org.osate.plugins.source.feature"/>
 <project reference="1.0,git@github.com:osate/osate2-core.git,develop,org.osate.pluginsupport"/>
 <project reference="1.0,git@github.com:osate/osate2-core.git,develop,org.osate.reporter"/>
+<project reference="1.0,git@github.com:osate/osate2-core.git,develop,org.osate.resolute.help"/>
 <project reference="1.0,git@github.com:osate/osate2-core.git,develop,org.osate.ui"/>
 <project reference="1.0,https://github.com/osate/osate2-ba.git,develop,org.osate.utils"/>
 <project reference="1.0,git@github.com:osate/osate2-core.git,develop,org.osate.wizards"/>
@@ -78,6 +80,9 @@
 <project reference="1.0,git@github.com:osate/osate2-core.git,develop,org.osate.xtext.aadl2.properties.ui"/>
 <project reference="1.0,git@github.com:osate/osate2-core.git,develop,org.osate.xtext.aadl2.ui"/>
 </provider>
+<workingSets editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" id="1415383457870_11" label="certware" name="certware">
+<item elementID="=net.certware.sacm" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSets>
 <workingSets editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" id="1406639508403_5" label="EMV2" name="EMV2">
 <item elementID="=org.osate.aadl2.errormodel.analysis" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=org.osate.xtext.aadl2.errormodel.ui" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
@@ -98,21 +103,22 @@
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.osate.ocarina.help" type="4"/>
 </workingSets>
 <workingSets editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" id="1406639477963_2" label="OSATE Core" name="OSATE Core">
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.osate.core.source.feature" type="4"/>
 <item elementID="=org.osate.xtext.aadl2.properties.ui" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.osate.core.source.feature" type="4"/>
 <item elementID="=org.osate.aadl2.edit" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.osate.aadl2.metamodel" type="4"/>
 <item elementID="=org.osate.ui" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.osate.core.feature" type="4"/>
-<item elementID="=org.osate.aadl2.instantiation" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=org.osate.workspace" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=org.osate.aadl2.instantiation" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=org.osate.aadl2" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=org.osate.core" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.osate.help" type="4"/>
+<item elementID="=org.osate.core" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=org.osate.branding" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.osate.build.target" type="4"/>
 <item elementID="=org.osate.reporter" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=org.osate.wizards" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.osate.resolute.help" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.osate.build.product" type="4"/>
 <item elementID="=org.osate.aadl2.model.editor" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=org.osate.annexsupport" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
@@ -121,8 +127,8 @@
 <item elementID="=org.osate.pluginsupport" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=org.osate.xtext.aadl2" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=org.osate.aadl2.modelsupport" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=org.osate.contribution.sei" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=org.osate.xtext.aadl2.ui" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=org.osate.contribution.sei" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSets>
 <workingSets editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" id="1406639488234_3" label="OSATE Plugins" name="OSATE Plugins">
 <item elementID="=org.osate.analysis.arinc653" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
@@ -137,13 +143,13 @@
 <item elementID="=org.osate.importer.simulink" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.osate.plugins.feature" type="4"/>
 <item elementID="=org.osate.imv.propertydecorations" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=org.osate.imv.osate" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.osate.plugins.source.feature" type="4"/>
-<item elementID="=org.osate.analysis.flows" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=org.osate.imv.osate" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.osate.imv.osate.feature" type="4"/>
+<item elementID="=org.osate.analysis.flows" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=org.osate.imv.aadldiagram" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=org.osate.analysis.security" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=org.osate.analysis.resource.management" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=org.osate.analysis.security" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSets>
 <workingSets editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" id="1413808798815_8" label="osate-ba" name="osate-ba">
 <item elementID="=org.osate.ba.edit" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
