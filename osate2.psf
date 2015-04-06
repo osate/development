@@ -20,6 +20,7 @@
 <project reference="1.0,https://github.com/smaccm/smaccm.git,sei_merge,fm-workbench/releng/fm-workbench.target.osate2.stable"/>
 <project reference="1.0,https://github.com/smaccm/smaccm.git,sei_merge,fm-workbench/releng/fm-workbench.target.osate2.testing"/>
 <project reference="1.0,https://github.com/smaccm/smaccm.git,sei_merge,fm-workbench/releng/fm-workbench.updatesite"/>
+<project reference="1.0,https://github.com/nasa/CertWare.git,master,net.certware.sacm"/>
 <project reference="1.0,https://github.com/osate/osate2-core.git,develop,org.osate.aadl2"/>
 <project reference="1.0,https://github.com/osate/osate2-core.git,develop,org.osate.aadl2.edit"/>
 <project reference="1.0,https://github.com/osate/ErrorModelV2.git,develop,org.osate.aadl2.errormodel.analysis"/>
@@ -50,7 +51,6 @@
 <project reference="1.0,https://github.com/osate/osate-ge.git,develop,org.osate.ge"/>
 <project reference="1.0,https://github.com/osate/osate-ge.git,develop,org.osate.ge.doc"/>
 <project reference="1.0,https://github.com/osate/osate-ge.git,develop,org.osate.ge.feature"/>
-<project reference="1.0,https://github.com/osate/osate-ge.git,develop,org.osate.ge.layout.test"/>
 <project reference="1.0,https://github.com/osate/osate2-core.git,develop,org.osate.help"/>
 <project reference="1.0,https://github.com/osate/osate2-plugins.git,develop,org.osate.importer"/>
 <project reference="1.0,https://github.com/osate/osate2-plugins.git,develop,org.osate.importer.lattix"/>
@@ -67,7 +67,6 @@
 <project reference="1.0,https://github.com/OpenAADL/osate2-ocarina.git,master,org.osate.ocarina.help"/>
 <project reference="1.0,https://github.com/OpenAADL/osate2-ocarina.git,master,org.osate.ocarina.real.xtext"/>
 <project reference="1.0,https://github.com/OpenAADL/osate2-ocarina.git,master,org.osate.ocarina.real.xtext.ui"/>
-<project reference="1.0,https://github.com/OpenAADL/osate2-ocarina.git,master,org.osate.ocarina.update"/>
 <project reference="1.0,https://github.com/osate/osate2-plugins.git,develop,org.osate.plugins.feature"/>
 <project reference="1.0,https://github.com/osate/osate2-core.git,develop,org.osate.pluginsupport"/>
 <project reference="1.0,https://github.com/osate/osate2-core.git,develop,org.osate.reporter"/>
@@ -167,6 +166,8 @@
 <item elementID="=org.osate.analysis.binpacking" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=org.osate.importer.simulink" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=org.osate.imv.propertydecorations" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=org.osate.imv.osate" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.osate.imv.osate.feature" type="4"/>
 <item elementID="=org.osate.analysis.flows" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.osate.imv.osate.feature" type="4"/>
 <item elementID="=org.osate.analysis.resource.management" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
