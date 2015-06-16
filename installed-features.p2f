@@ -19,11 +19,6 @@
         <repository location='http://www.eclipse.org/modeling/amalgam/downloads/package/modeling/luna/'/>
       </repositories>
     </iu>
-    <iu id='org.mj.eclipse.reporting.classpath.feature.group' name='Eclipse Project Dependencies Viewer' version='1.1.0'>
-      <repositories size='1'>
-        <repository location='http://epdv.googlecode.com/svn/trunk/UpdateSite'/>
-      </repositories>
-    </iu>
     <iu id='org.eclipse.wst.xml_ui.feature.feature.group' name='Eclipse XML Editors and Tools' version='3.6.3.v201501292352'>
       <repositories size='2'>
         <repository location='http://download.eclipse.org/releases/luna'/>
@@ -167,12 +162,18 @@
         <repository location='http://download.itemis.de/updates/releases'/>
       </repositories>
     </iu>
+    <iu id='org.eclipse.mylyn.git.feature.group' name='Mylyn Versions Connector: Git' version='1.6.2.v20150217-2249'>
+      <repositories size='2'>
+        <repository location='http://download.eclipse.org/releases/luna'/>
+        <repository location='http://www.eclipse.org/modeling/amalgam/downloads/package/modeling/luna/'/>
+      </repositories>
+    </iu>
     <iu id='org.sonatype.tycho.m2e.feature.feature.group' name='Tycho Project Configurators' version='0.7.0.201309291400'>
       <repositories size='1'>
         <repository location='http://repo1.maven.org/maven2/.m2e/connectors/m2eclipse-tycho/0.7.0/N/0.7.0.201309291400/'/>
       </repositories>
     </iu>
-    <iu id='org.eclipse.xtext.xbase.feature.group' name='Xbase' version='2.8.2.v201504100559'>
+    <iu id='org.eclipse.xtext.xbase.feature.group' name='Xbase' version='2.8.3.v201506010551'>
       <repositories size='2'>
         <repository location='http://download.itemis.de/updates/'/>
         <repository location='http://download.itemis.de/updates/releases'/>
@@ -184,43 +185,43 @@
         <repository location='http://download.itemis.de/updates/releases'/>
       </repositories>
     </iu>
-    <iu id='org.eclipse.xtext.sdk.feature.group' name='Xtext Complete SDK' version='2.8.2.v201504100559'>
+    <iu id='org.eclipse.xtext.sdk.feature.group' name='Xtext Complete SDK' version='2.8.3.v201506010551'>
       <repositories size='2'>
         <repository location='http://download.itemis.de/updates/'/>
         <repository location='http://download.itemis.de/updates/releases'/>
       </repositories>
     </iu>
-    <iu id='org.eclipse.xtext.docs.feature.group' name='Xtext Documentation' version='2.8.2.v201504100559'>
+    <iu id='org.eclipse.xtext.docs.feature.group' name='Xtext Documentation' version='2.8.3.v201506010551'>
       <repositories size='2'>
         <repository location='http://download.itemis.de/updates/'/>
         <repository location='http://download.itemis.de/updates/releases'/>
       </repositories>
     </iu>
-    <iu id='org.eclipse.xtext.examples.feature.group' name='Xtext Examples' version='2.8.2.v201504100559'>
+    <iu id='org.eclipse.xtext.examples.feature.group' name='Xtext Examples' version='2.8.3.v201506010551'>
       <repositories size='2'>
         <repository location='http://download.itemis.de/updates/'/>
         <repository location='http://download.itemis.de/updates/releases'/>
       </repositories>
     </iu>
-    <iu id='org.eclipse.xtext.redist.feature.group' name='Xtext Redistributable' version='2.8.2.v201504100559'>
+    <iu id='org.eclipse.xtext.redist.feature.group' name='Xtext Redistributable' version='2.8.3.v201506010551'>
       <repositories size='2'>
         <repository location='http://download.itemis.de/updates/'/>
         <repository location='http://download.itemis.de/updates/releases'/>
       </repositories>
     </iu>
-    <iu id='org.eclipse.xtext.runtime.feature.group' name='Xtext Runtime' version='2.8.2.v201504100559'>
+    <iu id='org.eclipse.xtext.runtime.feature.group' name='Xtext Runtime' version='2.8.3.v201506010551'>
       <repositories size='2'>
         <repository location='http://download.itemis.de/updates/'/>
         <repository location='http://download.itemis.de/updates/releases'/>
       </repositories>
     </iu>
-    <iu id='org.eclipse.xtext.ui.feature.group' name='Xtext UI' version='2.8.2.v201504100559'>
+    <iu id='org.eclipse.xtext.ui.feature.group' name='Xtext UI' version='2.8.3.v201506010551'>
       <repositories size='2'>
         <repository location='http://download.itemis.de/updates/'/>
         <repository location='http://download.itemis.de/updates/releases'/>
       </repositories>
     </iu>
-    <iu id='org.eclipse.xtext.license.feature.group' name='Xtext/Xtend License' version='2.6.0.v201504100559'>
+    <iu id='org.eclipse.xtext.license.feature.group' name='Xtext/Xtend License' version='2.6.0.v201506010551'>
       <repositories size='2'>
         <repository location='http://download.itemis.de/updates/'/>
         <repository location='http://download.itemis.de/updates/releases'/>
