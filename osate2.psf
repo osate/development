@@ -29,11 +29,9 @@
 <project reference="1.0,https://github.com/osate/osate2-core.git,develop,org.osate.aadl2.model.editor"/>
 <project reference="1.0,https://github.com/osate/osate2-core.git,develop,org.osate.aadl2.modelsupport"/>
 <project reference="1.0,https://github.com/osate/osate2-plugins.git,develop,org.osate.analysis.architecture"/>
-<project reference="1.0,https://github.com/osate/osate2-plugins.git,develop,org.osate.analysis.arinc653"/>
 <project reference="1.0,https://github.com/osate/osate2-plugins.git,develop,org.osate.analysis.binpacking"/>
 <project reference="1.0,https://github.com/osate/osate2-plugins.git,develop,org.osate.analysis.flows"/>
 <project reference="1.0,https://github.com/osate/osate2-plugins.git,develop,org.osate.analysis.flows.tests"/>
-<project reference="1.0,https://github.com/osate/osate2-plugins.git,develop,org.osate.analysis.lute"/>
 <project reference="1.0,https://github.com/osate/osate2-plugins.git,develop,org.osate.analysis.resource.budgets"/>
 <project reference="1.0,https://github.com/osate/osate2-plugins.git,develop,org.osate.analysis.resource.management"/>
 <project reference="1.0,https://github.com/osate/osate2-plugins.git,develop,org.osate.analysis.security"/>
