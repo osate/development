@@ -63,8 +63,6 @@
 <project reference="1.0,https://github.com/OpenAADL/osate2-ocarina.git,master,org.osate.ocarina.aadlcontribution"/>
 <project reference="1.0,https://github.com/OpenAADL/osate2-ocarina.git,master,org.osate.ocarina.feature"/>
 <project reference="1.0,https://github.com/OpenAADL/osate2-ocarina.git,master,org.osate.ocarina.help"/>
-<project reference="1.0,https://github.com/OpenAADL/osate2-ocarina.git,master,org.osate.ocarina.real.xtext"/>
-<project reference="1.0,https://github.com/OpenAADL/osate2-ocarina.git,master,org.osate.ocarina.real.xtext.ui"/>
 <project reference="1.0,https://github.com/osate/osate2-plugins.git,develop,org.osate.plugins.feature"/>
 <project reference="1.0,https://github.com/osate/osate2-core.git,develop,org.osate.pluginsupport"/>
 <project reference="1.0,https://github.com/osate/osate2-core.git,develop,org.osate.reporter"/>
