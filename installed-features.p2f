@@ -1,10 +1,101 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <?p2f version='1.0.0'?>
 <p2f version='1.0.0'>
-  <ius size='44'>
+  <ius size='79'>
+    <iu id='org.eclipse.m2m.atl.emftvm.feature.group' name='ATL EMFTVM' version='3.7.0.v201512171343'>
+      <repositories size='1'>
+        <repository location='https://hudson.eclipse.org/shared/job/mmt-atl-master/lastSuccessfulBuild/artifact/releng/org.eclipse.m2m.atl.update/target/repository/'/>
+      </repositories>
+    </iu>
+    <iu id='org.eclipse.m2m.atl.sdk.feature.group' name='ATL SDK - ATL Transformation Language SDK' version='3.7.0.v201512171343'>
+      <repositories size='1'>
+        <repository location='https://hudson.eclipse.org/shared/job/mmt-atl-master/lastSuccessfulBuild/artifact/releng/org.eclipse.m2m.atl.update/target/repository/'/>
+      </repositories>
+    </iu>
+    <iu id='org.eclipse.birt.feature.group' name='BIRT Framework' version='4.5.0.v201506092134'>
+      <repositories size='2'>
+        <repository location='http://download.eclipse.org/releases/mars/'/>
+        <repository location='http://www.eclipse.org/modeling/amalgam/downloads/package/modeling/mars/'/>
+      </repositories>
+    </iu>
+    <iu id='org.eclipse.ease.feature.feature.group' name='EASE Core feature' version='0.3.0.I201601291128'>
+      <repositories size='1'>
+        <repository location='http://download.eclipse.org/ease/update/nightly'/>
+      </repositories>
+    </iu>
+    <iu id='org.eclipse.ease.feature.source.feature.group' name='EASE Core feature Developer Resources' version='0.3.0.I201601291128'>
+      <repositories size='1'>
+        <repository location='http://download.eclipse.org/ease/update/nightly'/>
+      </repositories>
+    </iu>
+    <iu id='org.eclipse.ease.ui.feature.feature.group' name='EASE core UI feature' version='0.3.0.I201602140414'>
+      <repositories size='1'>
+        <repository location='http://download.eclipse.org/ease/update/nightly'/>
+      </repositories>
+    </iu>
+    <iu id='org.eclipse.ease.ui.feature.source.feature.group' name='EASE core UI feature Developer Resources' version='0.3.0.I201602140414'>
+      <repositories size='1'>
+        <repository location='http://download.eclipse.org/ease/update/nightly'/>
+      </repositories>
+    </iu>
+    <iu id='org.eclipse.ease.javascript.feature.feature.group' name='EASE Javascript feature' version='0.3.0.I201601291128'>
+      <repositories size='1'>
+        <repository location='http://download.eclipse.org/ease/update/nightly'/>
+      </repositories>
+    </iu>
+    <iu id='org.eclipse.ease.javascript.feature.source.feature.group' name='EASE Javascript feature Developer Resources' version='0.3.0.I201601291128'>
+      <repositories size='1'>
+        <repository location='http://download.eclipse.org/ease/update/nightly'/>
+      </repositories>
+    </iu>
+    <iu id='org.eclipse.ease.lang.jvm.feature.source.feature.group' name='EASE JVM Engine (Incubation) Developer Resources' version='0.3.0.I201511250751'>
+      <repositories size='1'>
+        <repository location='http://download.eclipse.org/ease/update/nightly'/>
+      </repositories>
+    </iu>
+    <iu id='org.eclipse.ease.modules.feature.feature.group' name='EASE Modules (Incubation)' version='0.3.0.I201601291243'>
+      <repositories size='1'>
+        <repository location='http://download.eclipse.org/ease/update/nightly'/>
+      </repositories>
+    </iu>
+    <iu id='org.eclipse.ease.python.feature.source.feature.group' name='EASE Python Developer Resources' version='0.3.0.I201511250751'>
+      <repositories size='1'>
+        <repository location='http://download.eclipse.org/ease/update/nightly'/>
+      </repositories>
+    </iu>
+    <iu id='org.eclipse.birt.chart.cshelp.feature.group' name='Eclipse BIRT Chart Context Sensitive Help Documentation' version='4.5.0.v201506092134'>
+      <repositories size='2'>
+        <repository location='http://download.eclipse.org/releases/mars/'/>
+        <repository location='http://www.eclipse.org/modeling/amalgam/downloads/package/modeling/mars/'/>
+      </repositories>
+    </iu>
+    <iu id='org.eclipse.birt.cshelp.feature.group' name='Eclipse BIRT Context Sensitive Help Documentation' version='4.5.0.v201506092134'>
+      <repositories size='2'>
+        <repository location='http://download.eclipse.org/releases/mars/'/>
+        <repository location='http://www.eclipse.org/modeling/amalgam/downloads/package/modeling/mars/'/>
+      </repositories>
+    </iu>
+    <iu id='org.eclipse.birt.doc.feature.group' name='Eclipse BIRT Documentation' version='4.5.0.v201506092134'>
+      <repositories size='2'>
+        <repository location='http://download.eclipse.org/releases/mars/'/>
+        <repository location='http://www.eclipse.org/modeling/amalgam/downloads/package/modeling/mars/'/>
+      </repositories>
+    </iu>
+    <iu id='org.eclipse.birt.example.feature.group' name='Eclipse BIRT Example' version='4.5.0.v201506092134'>
+      <repositories size='2'>
+        <repository location='http://download.eclipse.org/releases/mars/'/>
+        <repository location='http://www.eclipse.org/modeling/amalgam/downloads/package/modeling/mars/'/>
+      </repositories>
+    </iu>
+    <iu id='org.eclipse.birt.source.feature.group' name='Eclipse BIRT Source Feature' version='4.5.0.v201506092134'>
+      <repositories size='2'>
+        <repository location='http://download.eclipse.org/releases/mars/'/>
+        <repository location='http://www.eclipse.org/modeling/amalgam/downloads/package/modeling/mars/'/>
+      </repositories>
+    </iu>
     <iu id='org.eclipse.mylyn.github.feature.feature.group' name='Eclipse GitHub integration with task focused interface' version='4.0.3.201509231615-r'>
       <repositories size='2'>
-        <repository location='http://download.eclipse.org/releases/mars'/>
+        <repository location='http://download.eclipse.org/releases/mars/'/>
         <repository location='http://www.eclipse.org/modeling/amalgam/downloads/package/modeling/mars/'/>
       </repositories>
     </iu>
@@ -15,13 +106,13 @@
     </iu>
     <iu id='epp.package.modeling' name='Eclipse Modeling Tools' version='4.5.1.20150917-1200'>
       <repositories size='2'>
-        <repository location='http://download.eclipse.org/releases/mars'/>
+        <repository location='http://download.eclipse.org/releases/mars/'/>
         <repository location='http://www.eclipse.org/modeling/amalgam/downloads/package/modeling/mars/'/>
       </repositories>
     </iu>
     <iu id='org.eclipse.wst.xml_ui.feature.feature.group' name='Eclipse XML Editors and Tools' version='3.7.1.v201508271605'>
       <repositories size='2'>
-        <repository location='http://download.eclipse.org/releases/mars'/>
+        <repository location='http://download.eclipse.org/releases/mars/'/>
         <repository location='http://www.eclipse.org/modeling/amalgam/downloads/package/modeling/mars/'/>
       </repositories>
     </iu>
@@ -67,137 +158,216 @@
     </iu>
     <iu id='org.eclipse.emf.eef.sdk-feature.feature.group' name='Extended Editing Framework - SDK' version='1.5.0.201505291308'>
       <repositories size='2'>
-        <repository location='http://download.eclipse.org/releases/mars'/>
+        <repository location='http://download.eclipse.org/releases/mars/'/>
         <repository location='http://www.eclipse.org/modeling/amalgam/downloads/package/modeling/mars/'/>
+      </repositories>
+    </iu>
+    <iu id='org.eclipse.gendoc.feature.feature.group' name='Gendoc' version='0.5.1.201508310503'>
+      <repositories size='1'>
+        <repository location='http://download.eclipse.org/gendoc/updates/releases/0.5.0/'/>
       </repositories>
     </iu>
     <iu id='org.eclipse.zest.sdk.feature.group' name='Graphical Editing Framework Zest Visualization Toolkit SDK' version='1.6.1.201508170204'>
       <repositories size='2'>
-        <repository location='http://download.eclipse.org/releases/mars'/>
+        <repository location='http://download.eclipse.org/releases/mars/'/>
         <repository location='http://www.eclipse.org/modeling/amalgam/downloads/package/modeling/mars/'/>
       </repositories>
     </iu>
     <iu id='org.eclipse.gmf.tooling.feature.group' name='Graphical Modeling Framework (GMF) Tooling' version='3.3.1.201509020853'>
       <repositories size='2'>
-        <repository location='http://download.eclipse.org/releases/mars'/>
+        <repository location='http://download.eclipse.org/releases/mars/'/>
         <repository location='http://www.eclipse.org/modeling/amalgam/downloads/package/modeling/mars/'/>
       </repositories>
     </iu>
     <iu id='org.eclipse.gmf.sdk.feature.group' name='Graphical Modeling Framework (GMF) Tooling SDK' version='3.3.1.201509020853'>
       <repositories size='2'>
-        <repository location='http://download.eclipse.org/releases/mars'/>
+        <repository location='http://download.eclipse.org/releases/mars/'/>
         <repository location='http://www.eclipse.org/modeling/amalgam/downloads/package/modeling/mars/'/>
       </repositories>
     </iu>
     <iu id='org.eclipse.graphiti.sdk.plus.feature.feature.group' name='Graphiti SDK Plus (Incubation)' version='0.12.1.v20150916-0905'>
       <repositories size='2'>
-        <repository location='http://download.eclipse.org/releases/mars'/>
+        <repository location='http://download.eclipse.org/releases/mars/'/>
         <repository location='http://www.eclipse.org/modeling/amalgam/downloads/package/modeling/mars/'/>
       </repositories>
     </iu>
+    <iu id='org.scala-ide.sdt.weaving.feature.feature.group' name='JDT Weaving for Scala' version='4.3.0.v-2_11-201512011536-499c89a'>
+      <repositories size='1'>
+        <repository location='http://download.scala-ide.org/sdk/lithium/e44/scala211/stable/site'/>
+      </repositories>
+    </iu>
     <iu id='org.eclipse.m2e.feature.feature.group' name='m2e - Maven Integration for Eclipse (includes Incubating components)' version='1.6.2.20150902-0002'>
-      <repositories size='2'>
-        <repository location='http://download.eclipse.org/releases/mars'/>
+      <repositories size='3'>
+        <repository location='http://download.scala-ide.org/sdk/lithium/e44/scala211/stable/site'/>
+        <repository location='http://download.eclipse.org/releases/mars/'/>
         <repository location='http://www.eclipse.org/modeling/amalgam/downloads/package/modeling/mars/'/>
       </repositories>
     </iu>
     <iu id='org.eclipse.m2e.logback.feature.feature.group' name='m2e - slf4j over logback logging (Optional)' version='1.6.2.20150902-0002'>
       <repositories size='2'>
-        <repository location='http://download.eclipse.org/releases/mars'/>
+        <repository location='http://download.eclipse.org/releases/mars/'/>
         <repository location='http://www.eclipse.org/modeling/amalgam/downloads/package/modeling/mars/'/>
       </repositories>
     </iu>
     <iu id='org.eclipse.emf.compare.uml2.feature.group' name='Model comparison (EMF Compare) - UML2 support' version='3.1.1.201509120604'>
       <repositories size='2'>
-        <repository location='http://download.eclipse.org/releases/mars'/>
+        <repository location='http://download.eclipse.org/releases/mars/'/>
         <repository location='http://www.eclipse.org/modeling/amalgam/downloads/package/modeling/mars/'/>
       </repositories>
     </iu>
     <iu id='org.eclipse.emf.mwe2.language.sdk.feature.group' name='MWE 2 language SDK' version='2.8.1.v201508030411'>
-      <repositories size='3'>
+      <repositories size='4'>
         <repository location='http://download.itemis.de/updates/'/>
-        <repository location='http://download.eclipse.org/releases/mars'/>
+        <repository location='http://download.eclipse.org/releases/mars/'/>
+        <repository location='http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/'/>
         <repository location='http://www.eclipse.org/modeling/amalgam/downloads/package/modeling/mars/'/>
       </repositories>
     </iu>
-    <iu id='org.eclipse.emf.mwe2.runtime.sdk.feature.group' name='MWE 2 runtime SDK' version='2.8.1.v201508030321'>
-      <repositories size='3'>
+    <iu id='org.eclipse.emf.mwe2.runtime.sdk.feature.group' name='MWE 2 runtime SDK' version='2.8.3.v201512160556'>
+      <repositories size='4'>
         <repository location='http://download.itemis.de/updates/'/>
-        <repository location='http://download.eclipse.org/releases/mars'/>
+        <repository location='http://download.eclipse.org/releases/mars/'/>
+        <repository location='http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/'/>
         <repository location='http://www.eclipse.org/modeling/amalgam/downloads/package/modeling/mars/'/>
       </repositories>
     </iu>
-    <iu id='org.eclipse.emf.mwe.core.feature.group' name='MWE Core' version='1.3.11.v201508030321'>
-      <repositories size='3'>
+    <iu id='org.eclipse.emf.mwe.core.feature.group' name='MWE Core' version='1.3.13.v201512160556'>
+      <repositories size='4'>
         <repository location='http://download.itemis.de/updates/'/>
-        <repository location='http://download.eclipse.org/releases/mars'/>
+        <repository location='http://download.eclipse.org/releases/mars/'/>
+        <repository location='http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/'/>
         <repository location='http://www.eclipse.org/modeling/amalgam/downloads/package/modeling/mars/'/>
       </repositories>
     </iu>
-    <iu id='org.eclipse.emf.mwe.doc.feature.group' name='MWE Documentation' version='1.3.11.v201508030321'>
-      <repositories size='3'>
+    <iu id='org.eclipse.emf.mwe.doc.feature.group' name='MWE Documentation' version='1.3.13.v201512160556'>
+      <repositories size='4'>
         <repository location='http://download.itemis.de/updates/'/>
-        <repository location='http://download.eclipse.org/releases/mars'/>
+        <repository location='http://download.eclipse.org/releases/mars/'/>
+        <repository location='http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/'/>
         <repository location='http://www.eclipse.org/modeling/amalgam/downloads/package/modeling/mars/'/>
       </repositories>
     </iu>
-    <iu id='org.eclipse.emf.mwe.sdk.feature.group' name='MWE SDK' version='1.3.11.v201508030321'>
-      <repositories size='3'>
+    <iu id='org.eclipse.emf.mwe.sdk.feature.group' name='MWE SDK' version='1.3.13.v201512160556'>
+      <repositories size='4'>
         <repository location='http://download.itemis.de/updates/'/>
-        <repository location='http://download.eclipse.org/releases/mars'/>
+        <repository location='http://download.eclipse.org/releases/mars/'/>
+        <repository location='http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/'/>
         <repository location='http://www.eclipse.org/modeling/amalgam/downloads/package/modeling/mars/'/>
       </repositories>
     </iu>
-    <iu id='org.eclipse.emf.mwe.ui.feature.group' name='MWE UI' version='1.3.11.v201508030321'>
-      <repositories size='3'>
+    <iu id='org.eclipse.emf.mwe.ui.feature.group' name='MWE UI' version='1.3.13.v201512160556'>
+      <repositories size='4'>
         <repository location='http://download.itemis.de/updates/'/>
-        <repository location='http://download.eclipse.org/releases/mars'/>
+        <repository location='http://download.eclipse.org/releases/mars/'/>
+        <repository location='http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/'/>
         <repository location='http://www.eclipse.org/modeling/amalgam/downloads/package/modeling/mars/'/>
       </repositories>
     </iu>
     <iu id='org.eclipse.emf.mwe.license.feature.group' name='MWE/MWE2 License' version='2.6.0.v201505260456'>
-      <repositories size='1'>
+      <repositories size='2'>
         <repository location='http://download.itemis.de/updates/'/>
+        <repository location='http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/'/>
       </repositories>
     </iu>
     <iu id='org.eclipse.emf.mwe2.launcher.feature.group' name='MWE2 Launcher' version='2.8.1.v201508030411'>
-      <repositories size='1'>
+      <repositories size='2'>
         <repository location='http://download.itemis.de/updates/'/>
+        <repository location='http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/'/>
       </repositories>
     </iu>
     <iu id='org.eclipse.mylyn.git.feature.group' name='Mylyn Versions Connector: Git' version='1.9.0.v20150908-1643'>
       <repositories size='2'>
-        <repository location='http://download.eclipse.org/releases/mars'/>
+        <repository location='http://download.eclipse.org/releases/mars/'/>
         <repository location='http://www.eclipse.org/modeling/amalgam/downloads/package/modeling/mars/'/>
+      </repositories>
+    </iu>
+    <iu id='org.eclipse.ocl.examples.feature.group' name='OCL Examples and Editors SDK' version='6.0.1.v20150908-1239'>
+      <repositories size='2'>
+        <repository location='http://download.eclipse.org/releases/mars/'/>
+        <repository location='http://www.eclipse.org/modeling/amalgam/downloads/package/modeling/mars/'/>
+      </repositories>
+    </iu>
+    <iu id='org.eclipse.papyrus.uml.alf.extra.feature.feature.group' name='Papyrus ALF Properties View Integration (Incubation)' version='0.7.0.201511250947'>
+      <repositories size='1'>
+        <repository location='http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/mars'/>
+      </repositories>
+    </iu>
+    <iu id='org.eclipse.gendoc.papyrus.feature.feature.group' name='Papyrus bundle for Gendoc' version='0.5.1.201508310503'>
+      <repositories size='1'>
+        <repository location='http://download.eclipse.org/gendoc/updates/releases/0.5.0/'/>
+      </repositories>
+    </iu>
+    <iu id='org.eclipse.papyrus.example.feature.feature.group' name='Papyrus Examples' version='1.1.3.201511250947'>
+      <repositories size='1'>
+        <repository location='http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/mars'/>
+      </repositories>
+    </iu>
+    <iu id='org.eclipse.papyrus.sdk.feature.feature.group' name='Papyrus UML' version='1.1.3.201511250900'>
+      <repositories size='3'>
+        <repository location='http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/mars'/>
+        <repository location='http://download.eclipse.org/releases/mars/'/>
+        <repository location='http://www.eclipse.org/modeling/amalgam/downloads/package/modeling/mars/'/>
+      </repositories>
+    </iu>
+    <iu id='org.eclipse.papyrus.sdk.feature.source.feature.group' name='Papyrus UML Developer Resources' version='1.1.3.201511250900'>
+      <repositories size='1'>
+        <repository location='http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/mars'/>
+      </repositories>
+    </iu>
+    <iu id='org.eclipse.rmf.reqif10.feature.feature.group' name='RMF Core ReqIF Feature (Incubation)' version='0.13.0.201509161042'>
+      <repositories size='1'>
+        <repository location='http://download.eclipse.org/rmf/updates/releases'/>
+      </repositories>
+    </iu>
+    <iu id='org.eclipse.rmf.examples.feature.feature.group' name='RMF Examples Feature (Incubation)' version='0.13.0.201509161042'>
+      <repositories size='1'>
+        <repository location='http://download.eclipse.org/rmf/updates/releases'/>
+      </repositories>
+    </iu>
+    <iu id='org.eclipse.rmf.reqif10.pror.feature.feature.group' name='RMF ProR Feature (Incubation)' version='0.13.0.201509161042'>
+      <repositories size='1'>
+        <repository location='http://download.eclipse.org/rmf/updates/releases'/>
       </repositories>
     </iu>
     <iu id='org.eclipse.sirius.runtime.ide.eef.feature.group' name='Sirius Integration with EEF' version='3.0.2.201509150749'>
       <repositories size='2'>
-        <repository location='http://download.eclipse.org/releases/mars'/>
+        <repository location='http://download.eclipse.org/releases/mars/'/>
         <repository location='http://www.eclipse.org/modeling/amalgam/downloads/package/modeling/mars/'/>
       </repositories>
     </iu>
     <iu id='org.eclipse.sirius.runtime.ide.xtext.feature.group' name='Sirius Integration with Xtext' version='3.0.2.201509150749'>
       <repositories size='2'>
-        <repository location='http://download.eclipse.org/releases/mars'/>
+        <repository location='http://download.eclipse.org/releases/mars/'/>
         <repository location='http://www.eclipse.org/modeling/amalgam/downloads/package/modeling/mars/'/>
       </repositories>
     </iu>
     <iu id='org.eclipse.sirius.samples.feature.group' name='Sirius Samples' version='3.0.2.201509150749'>
       <repositories size='2'>
-        <repository location='http://download.eclipse.org/releases/mars'/>
+        <repository location='http://download.eclipse.org/releases/mars/'/>
         <repository location='http://www.eclipse.org/modeling/amalgam/downloads/package/modeling/mars/'/>
       </repositories>
     </iu>
     <iu id='org.eclipse.sirius.specifier.feature.group' name='Sirius Specifier Environment' version='3.0.2.201509150749'>
       <repositories size='2'>
-        <repository location='http://download.eclipse.org/releases/mars'/>
+        <repository location='http://download.eclipse.org/releases/mars/'/>
         <repository location='http://www.eclipse.org/modeling/amalgam/downloads/package/modeling/mars/'/>
       </repositories>
     </iu>
     <iu id='org.eclipse.sirius.aql.feature.group' name='Sirius Support for AQL (Experimental)' version='3.0.2.201509150749'>
       <repositories size='2'>
-        <repository location='http://download.eclipse.org/releases/mars'/>
+        <repository location='http://download.eclipse.org/releases/mars/'/>
+        <repository location='http://www.eclipse.org/modeling/amalgam/downloads/package/modeling/mars/'/>
+      </repositories>
+    </iu>
+    <iu id='org.eclipse.swtbot.eclipse.feature.group' name='SWTBot for Eclipse Testing' version='2.3.0.201506081302'>
+      <repositories size='2'>
+        <repository location='http://download.eclipse.org/releases/mars/'/>
+        <repository location='http://www.eclipse.org/modeling/amalgam/downloads/package/modeling/mars/'/>
+      </repositories>
+    </iu>
+    <iu id='org.eclipse.swtbot.ide.feature.group' name='SWTBot IDE Features' version='2.3.0.201506081302'>
+      <repositories size='2'>
+        <repository location='http://download.eclipse.org/releases/mars/'/>
         <repository location='http://www.eclipse.org/modeling/amalgam/downloads/package/modeling/mars/'/>
       </repositories>
     </iu>
@@ -207,10 +377,26 @@
       </repositories>
     </iu>
     <iu id='org.eclipse.xtext.xbase.feature.group' name='Xbase' version='2.8.4.v201508050135'>
-      <repositories size='3'>
+      <repositories size='4'>
         <repository location='http://download.itemis.de/updates/'/>
-        <repository location='http://download.eclipse.org/releases/mars'/>
+        <repository location='http://download.eclipse.org/releases/mars/'/>
+        <repository location='http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/'/>
         <repository location='http://www.eclipse.org/modeling/amalgam/downloads/package/modeling/mars/'/>
+      </repositories>
+    </iu>
+    <iu id='it.xsemantics.runtime.feature.source.feature.group' name='Xsemantics Runtime Feature Developer Resources' version='1.8.1.v20151009-0657'>
+      <repositories size='1'>
+        <repository location='http://sourceforge.net/projects/xsemantics/files/updates/releases/1.8'/>
+      </repositories>
+    </iu>
+    <iu id='it.xsemantics.sdk.feature.group' name='Xsemantics SDK' version='1.8.1.v20151009-0657'>
+      <repositories size='1'>
+        <repository location='http://sourceforge.net/projects/xsemantics/files/updates/releases/1.8'/>
+      </repositories>
+    </iu>
+    <iu id='it.xsemantics.sdk.source.feature.group' name='Xsemantics SDK Developer Resources' version='1.8.1.v20151009-0657'>
+      <repositories size='1'>
+        <repository location='http://sourceforge.net/projects/xsemantics/files/updates/releases/1.8'/>
       </repositories>
     </iu>
     <iu id='de.itemis.xtext.antlr.sdk.feature.group' name='Xtext Antlr SDK Feature' version='2.1.1.v201405091103'>
@@ -219,48 +405,65 @@
       </repositories>
     </iu>
     <iu id='org.eclipse.xtext.sdk.feature.group' name='Xtext Complete SDK' version='2.8.4.v201508050135'>
-      <repositories size='3'>
+      <repositories size='4'>
         <repository location='http://download.itemis.de/updates/'/>
-        <repository location='http://download.eclipse.org/releases/mars'/>
+        <repository location='http://download.eclipse.org/releases/mars/'/>
+        <repository location='http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/'/>
         <repository location='http://www.eclipse.org/modeling/amalgam/downloads/package/modeling/mars/'/>
       </repositories>
     </iu>
     <iu id='org.eclipse.xtext.docs.feature.group' name='Xtext Documentation' version='2.8.4.v201508050135'>
-      <repositories size='3'>
+      <repositories size='4'>
         <repository location='http://download.itemis.de/updates/'/>
-        <repository location='http://download.eclipse.org/releases/mars'/>
+        <repository location='http://download.eclipse.org/releases/mars/'/>
+        <repository location='http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/'/>
         <repository location='http://www.eclipse.org/modeling/amalgam/downloads/package/modeling/mars/'/>
       </repositories>
     </iu>
     <iu id='org.eclipse.xtext.examples.feature.group' name='Xtext Examples' version='2.8.4.v201508050135'>
-      <repositories size='3'>
+      <repositories size='4'>
         <repository location='http://download.itemis.de/updates/'/>
-        <repository location='http://download.eclipse.org/releases/mars'/>
+        <repository location='http://download.eclipse.org/releases/mars/'/>
+        <repository location='http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/'/>
         <repository location='http://www.eclipse.org/modeling/amalgam/downloads/package/modeling/mars/'/>
+      </repositories>
+    </iu>
+    <iu id='de.libutzki.xtext.nodemodeloutline.feature.feature.group' name='Xtext Node Model Outline' version='0.0.1.201502272017'>
+      <repositories size='1'>
+        <repository location='http://xtexttools.libutzki.de/'/>
       </repositories>
     </iu>
     <iu id='org.eclipse.xtext.redist.feature.group' name='Xtext Redistributable' version='2.8.4.v201508050135'>
-      <repositories size='1'>
+      <repositories size='2'>
         <repository location='http://download.itemis.de/updates/'/>
+        <repository location='http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/'/>
       </repositories>
     </iu>
     <iu id='org.eclipse.xtext.runtime.feature.group' name='Xtext Runtime' version='2.8.4.v201508050135'>
-      <repositories size='3'>
+      <repositories size='4'>
         <repository location='http://download.itemis.de/updates/'/>
-        <repository location='http://download.eclipse.org/releases/mars'/>
+        <repository location='http://download.eclipse.org/releases/mars/'/>
+        <repository location='http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/'/>
         <repository location='http://www.eclipse.org/modeling/amalgam/downloads/package/modeling/mars/'/>
+      </repositories>
+    </iu>
+    <iu id='de.libutzki.xtext.semanticmodeloutline.feature.feature.group' name='Xtext Semantic Model Outline' version='0.0.1.201502272017'>
+      <repositories size='1'>
+        <repository location='http://xtexttools.libutzki.de/'/>
       </repositories>
     </iu>
     <iu id='org.eclipse.xtext.ui.feature.group' name='Xtext UI' version='2.8.4.v201508050135'>
-      <repositories size='3'>
+      <repositories size='4'>
         <repository location='http://download.itemis.de/updates/'/>
-        <repository location='http://download.eclipse.org/releases/mars'/>
+        <repository location='http://download.eclipse.org/releases/mars/'/>
+        <repository location='http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/'/>
         <repository location='http://www.eclipse.org/modeling/amalgam/downloads/package/modeling/mars/'/>
       </repositories>
     </iu>
-    <iu id='org.eclipse.xtext.license.feature.group' name='Xtext/Xtend License' version='2.6.0.v201508050135'>
-      <repositories size='1'>
+    <iu id='org.eclipse.xtext.license.feature.group' name='Xtext/Xtend License' version='2.6.0.v201512180746'>
+      <repositories size='2'>
         <repository location='http://download.itemis.de/updates/'/>
+        <repository location='http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/'/>
       </repositories>
     </iu>
   </ius>
