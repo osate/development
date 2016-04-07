@@ -146,9 +146,8 @@
       </repositories>
     </iu>
     <iu id='org.eclipse.m2e.feature.feature.group' name='m2e - Maven Integration for Eclipse (includes Incubating components)' version='1.6.2.20150902-0002'>
-      <repositories size='3'>
+      <repositories size='2'>
         <repository location='http://www.eclipse.org/modeling/amalgam/downloads/package/modeling/mars/'/>
-        <repository location='http://download.scala-ide.org/sdk/lithium/e44/scala211/stable/site'/>
         <repository location='http://download.eclipse.org/releases/mars/'/>
       </repositories>
     </iu>
