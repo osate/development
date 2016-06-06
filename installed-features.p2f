@@ -101,7 +101,7 @@
     </iu>
     <iu id='org.eclipselabs.xtext.utils.unittesting.feature.feature.group' name='Eclipse Labs Xtext Testing Utilities' version='0.9.3.201204261440'>
       <repositories size='1'>
-        <repository location='http://xtext-utils.eclipselabs.org.codespot.com/git.distribution/releases/unittesting-0.9.x'/>
+        <repository location='http://aadl.info/aadl/osate/build/xtext-utils/'/>
       </repositories>
     </iu>
     <iu id='epp.package.modeling' name='Eclipse Modeling Tools' version='4.5.2.20160218-0600'>
