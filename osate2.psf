@@ -108,7 +108,6 @@
 <project reference="1.0,https://github.com/osate/osate2-core.git,develop,org.osate.pluginsupport"/>
 <project reference="1.0,https://github.com/osate/osate2-core.git,develop,org.osate.reporter"/>
 <project reference="1.0,https://github.com/osate/alisa,develop,org.osate.reqspec"/>
-<project reference="1.0,https://github.com/osate/alisa,develop,org.osate.reqspec.design"/>
 <project reference="1.0,https://github.com/osate/alisa,develop,org.osate.reqspec.sdk"/>
 <project reference="1.0,https://github.com/osate/alisa,develop,org.osate.reqspec.tests"/>
 <project reference="1.0,https://github.com/osate/alisa,develop,org.osate.reqspec.ui"/>
@@ -171,7 +170,6 @@
 <item elementID="=org.osate.alisa.common.tests" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.osate.alisa.workbench.sdk" type="4"/>
 <item elementID="=org.osate.organization" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=org.osate.reqspec.design" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=org.osate.reqspec.tests" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSets>
 <workingSets editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" id="1463598705326_24" label="CertWare" name="CertWare">
