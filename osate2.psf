@@ -53,7 +53,6 @@
 <project reference="1.0,https://github.com/osate/alisa,develop,org.osate.alisa.common.tests"/>
 <project reference="1.0,https://github.com/osate/alisa,develop,org.osate.alisa.common.ui"/>
 <project reference="1.0,https://github.com/osate/alisa,develop,org.osate.alisa.help"/>
-<project reference="1.0,https://github.com/osate/alisa,develop,org.osate.alisa.updatesite"/>
 <project reference="1.0,https://github.com/osate/alisa,develop,org.osate.alisa.workbench"/>
 <project reference="1.0,https://github.com/osate/alisa,develop,org.osate.alisa.workbench.sdk"/>
 <project reference="1.0,https://github.com/osate/alisa,develop,org.osate.alisa.workbench.tests"/>
@@ -108,10 +107,8 @@
 <project reference="1.0,https://github.com/osate/osate2-core.git,develop,org.osate.pluginsupport"/>
 <project reference="1.0,https://github.com/osate/osate2-core.git,develop,org.osate.reporter"/>
 <project reference="1.0,https://github.com/osate/alisa,develop,org.osate.reqspec"/>
-<project reference="1.0,https://github.com/osate/alisa,develop,org.osate.reqspec.sdk"/>
 <project reference="1.0,https://github.com/osate/alisa,develop,org.osate.reqspec.tests"/>
 <project reference="1.0,https://github.com/osate/alisa,develop,org.osate.reqspec.ui"/>
-<project reference="1.0,https://github.com/osate/alisa,develop,org.osate.reqspec.updatesite"/>
 <project reference="1.0,https://github.com/osate/alisa,develop,org.osate.reqtrace"/>
 <project reference="1.0,https://github.com/osate/osate2-core.git,develop,org.osate.resolute.help"/>
 <project reference="1.0,https://github.com/osate/alisa,develop,org.osate.results"/>
@@ -138,7 +135,6 @@
 <project reference="1.0,https://github.com/osate/osate2-plugins.git,develop,osate2-plugins.releng"/>
 </provider>
 <workingSets editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" id="1434379140202_11" label="alisa" name="alisa">
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.osate.reqspec.sdk" type="4"/>
 <item elementID="=org.osate.alisa.workbench.tests" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=org.osate.categories.tests" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=org.osate.assure.tests" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
@@ -146,7 +142,6 @@
 <item elementID="=org.osate.reqtrace" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=org.osate.alisa.common" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=org.osate.categories.ui" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.osate.alisa.updatesite" type="4"/>
 <item elementID="=org.osate.assure" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=org.osate.verify.ui" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=org.osate.verify.tests" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
@@ -163,7 +158,6 @@
 <item elementID="=org.osate.organization.ui" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=org.osate.measures" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=org.osate.assure.ui" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.osate.reqspec.updatesite" type="4"/>
 <item elementID="=org.osate.reqspec.ui" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=org.osate.alisa.workbench.ui" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=alisa.releng" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
