@@ -91,9 +91,9 @@
         <repository location='http://download.eclipse.org/releases/mars/'/>
       </repositories>
     </iu>
-    <iu id='org.eclipselabs.xtext.utils.unittesting.feature.feature.group' name='Eclipse Labs Xtext Testing Utilities' version='0.9.3.201204261440'>
+    <iu id='com.itemis.xtext.testing.feature.feature.group' name='Xtext Testing Framework' version='0.2.0.201612011358'>
       <repositories size='1'>
-        <repository location='http://aadl.sei.cmu.edu/aadl/osate/build/xtext-utils/'/>
+        <repository location='https://dl.bintray.com/itemis/generic/xtext-testing/updates/'/>
       </repositories>
     </iu>
     <iu id='epp.package.modeling' name='Eclipse Modeling Tools' version='4.5.2.20160218-0600'>
