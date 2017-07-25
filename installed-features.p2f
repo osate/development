@@ -362,33 +362,33 @@
         <repository location='http://repo1.maven.org/maven2/.m2e/connectors/m2eclipse-tycho/0.7.0/N/0.7.0.201309291400/'/>
       </repositories>
     </iu>
-    <iu id='org.eclipse.xtext.xbase.feature.group' name='Xbase' version='2.11.0.v20170201-0242'>
+    <iu id='org.eclipse.xtext.xbase.feature.group' name='Xbase' version='2.12.0.v20170519-1412'>
       <repositories size='2'>
         <repository location='http://download.itemis.de/updates/'/>
         <repository location='http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/'/>
       </repositories>
     </iu>
-    <iu id='it.xsemantics.doc.feature.feature.group' name='Xsemantics Documentation Feature' version='1.11.0.v20170202-1734'>
+    <iu id='it.xsemantics.doc.feature.feature.group' name='Xsemantics Documentation Feature' version='1.12.1.v20170704-1334'>
       <repositories size='1'>
-        <repository location='https://dl.bintray.com/lorenzobettini/xsemantics/updates/1.11/'/>
+        <repository location='https://dl.bintray.com/lorenzobettini/xsemantics/updates/1.12/'/>
       </repositories>
     </iu>
-    <iu id='it.xsemantics.runtime.feature.feature.group' name='Xsemantics Runtime Feature' version='1.11.0.v20170202-1734'>
+    <iu id='it.xsemantics.runtime.feature.feature.group' name='Xsemantics Runtime Feature' version='1.12.1.v20170704-1334'>
       <repositories size='1'>
-        <repository location='https://dl.bintray.com/lorenzobettini/xsemantics/updates/1.11/'/>
+        <repository location='https://dl.bintray.com/lorenzobettini/xsemantics/updates/1.12/'/>
       </repositories>
     </iu>
-    <iu id='it.xsemantics.sdk.feature.group' name='Xsemantics SDK' version='1.11.0.v20170202-1734'>
+    <iu id='it.xsemantics.sdk.feature.group' name='Xsemantics SDK' version='1.12.1.v20170704-1334'>
       <repositories size='1'>
-        <repository location='https://dl.bintray.com/lorenzobettini/xsemantics/updates/1.11/'/>
+        <repository location='https://dl.bintray.com/lorenzobettini/xsemantics/updates/1.12/'/>
       </repositories>
     </iu>
-    <iu id='it.xsemantics.feature.feature.group' name='Xsemantics UI' version='1.11.0.v20170202-1734'>
+    <iu id='it.xsemantics.feature.feature.group' name='Xsemantics UI' version='1.12.1.v20170704-1334'>
       <repositories size='1'>
-        <repository location='https://dl.bintray.com/lorenzobettini/xsemantics/updates/1.11/'/>
+        <repository location='https://dl.bintray.com/lorenzobettini/xsemantics/updates/1.12/'/>
       </repositories>
     </iu>
-    <iu id='org.eclipse.xtend.sdk.feature.group' name='Xtend IDE' version='2.11.0.v20170201-0242'>
+    <iu id='org.eclipse.xtend.sdk.feature.group' name='Xtend IDE' version='2.12.0.v20170519-1412'>
       <repositories size='2'>
         <repository location='http://download.itemis.de/updates/'/>
         <repository location='http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/'/>
@@ -399,19 +399,19 @@
         <repository location='http://download.itemis.de/updates/'/>
       </repositories>
     </iu>
-    <iu id='org.eclipse.xtext.sdk.feature.group' name='Xtext Complete SDK' version='2.11.0.v20170201-0242'>
+    <iu id='org.eclipse.xtext.sdk.feature.group' name='Xtext Complete SDK' version='2.12.0.v20170519-1412'>
       <repositories size='2'>
         <repository location='http://download.itemis.de/updates/'/>
         <repository location='http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/'/>
       </repositories>
     </iu>
-    <iu id='org.eclipse.xtext.docs.feature.group' name='Xtext Documentation' version='2.11.0.v20170130-0818'>
+    <iu id='org.eclipse.xtext.docs.feature.group' name='Xtext Documentation' version='2.12.0.v20170519-0809'>
       <repositories size='2'>
         <repository location='http://download.itemis.de/updates/'/>
         <repository location='http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/'/>
       </repositories>
     </iu>
-    <iu id='org.eclipse.xtext.examples.feature.group' name='Xtext Examples' version='2.11.0.v20170201-0242'>
+    <iu id='org.eclipse.xtext.examples.feature.group' name='Xtext Examples' version='2.12.0.v20170519-1412'>
       <repositories size='2'>
         <repository location='http://download.itemis.de/updates/'/>
         <repository location='http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/'/>
@@ -422,13 +422,13 @@
         <repository location='http://xtexttools.libutzki.de/'/>
       </repositories>
     </iu>
-    <iu id='org.eclipse.xtext.redist.feature.group' name='Xtext Redistributable' version='2.11.0.v20170201-0242'>
+    <iu id='org.eclipse.xtext.redist.feature.group' name='Xtext Redistributable' version='2.12.0.v20170519-1412'>
       <repositories size='2'>
         <repository location='http://download.itemis.de/updates/'/>
         <repository location='http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/'/>
       </repositories>
     </iu>
-    <iu id='org.eclipse.xtext.runtime.feature.group' name='Xtext Runtime' version='2.11.0.v20170201-0242'>
+    <iu id='org.eclipse.xtext.runtime.feature.group' name='Xtext Runtime' version='2.12.0.v20170519-1412'>
       <repositories size='2'>
         <repository location='http://download.itemis.de/updates/'/>
         <repository location='http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/'/>
@@ -439,13 +439,13 @@
         <repository location='http://xtexttools.libutzki.de/'/>
       </repositories>
     </iu>
-    <iu id='org.eclipse.xtext.ui.feature.group' name='Xtext UI' version='2.11.0.v20170201-0242'>
+    <iu id='org.eclipse.xtext.ui.feature.group' name='Xtext UI' version='2.12.0.v20170519-1412'>
       <repositories size='2'>
         <repository location='http://download.itemis.de/updates/'/>
         <repository location='http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/'/>
       </repositories>
     </iu>
-    <iu id='org.eclipse.xtext.xtext.ui.feature.group' name='Xtext Xtext UI' version='2.11.0.v20170201-0242'>
+    <iu id='org.eclipse.xtext.xtext.ui.feature.group' name='Xtext Xtext UI' version='2.12.0.v20170519-1412'>
       <repositories size='2'>
         <repository location='http://download.itemis.de/updates/'/>
         <repository location='http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/'/>
