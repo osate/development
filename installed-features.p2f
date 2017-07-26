@@ -298,51 +298,51 @@
         <repository location='http://download.eclipse.org/rmf/updates/releases/0.13.0'/>
       </repositories>
     </iu>
-    <iu id='org.eclipse.sirius.runtime.ide.eef.feature.group' name='Sirius Integration with EEF' version='3.1.4.201602091241'>
+    <iu id='org.eclipse.sirius.runtime.ide.eef.feature.group' name='Sirius Integration with EEF' version='4.1.5.201705040741'>
       <repositories size='3'>
-        <repository location='http://download.eclipse.org/sirius/updates/releases/3.1.4/mars'/>
+        <repository location='http://download.eclipse.org/sirius/updates/releases/4.1.5/mars'/>
         <repository location='http://www.eclipse.org/modeling/amalgam/downloads/package/modeling/mars/'/>
         <repository location='http://download.eclipse.org/releases/mars/'/>
       </repositories>
     </iu>
-    <iu id='org.eclipse.sirius.runtime.ide.xtext.feature.group' name='Sirius Integration with Xtext' version='3.1.4.201602091241'>
+    <iu id='org.eclipse.sirius.runtime.ide.xtext.feature.group' name='Sirius Integration with Xtext' version='4.1.5.201705040741'>
       <repositories size='3'>
-        <repository location='http://download.eclipse.org/sirius/updates/releases/3.1.4/mars'/>
+        <repository location='http://download.eclipse.org/sirius/updates/releases/4.1.5/mars'/>
         <repository location='http://www.eclipse.org/modeling/amalgam/downloads/package/modeling/mars/'/>
         <repository location='http://download.eclipse.org/releases/mars/'/>
       </repositories>
     </iu>
-    <iu id='org.eclipse.sirius.runtime.ide.ui.feature.group' name='Sirius Runtime IDE' version='3.1.4.201602091241'>
+    <iu id='org.eclipse.sirius.runtime.ide.ui.feature.group' name='Sirius Runtime IDE' version='4.1.5.201705040741'>
       <repositories size='3'>
-        <repository location='http://download.eclipse.org/sirius/updates/releases/3.1.4/mars'/>
+        <repository location='http://download.eclipse.org/sirius/updates/releases/4.1.5/mars'/>
         <repository location='http://www.eclipse.org/modeling/amalgam/downloads/package/modeling/mars/'/>
         <repository location='http://download.eclipse.org/releases/mars/'/>
       </repositories>
     </iu>
-    <iu id='org.eclipse.sirius.runtime.aql.feature.group' name='Sirius Runtime Support for AQL' version='3.1.4.201602091241'>
+    <iu id='org.eclipse.sirius.runtime.aql.feature.group' name='Sirius Runtime Support for AQL' version='4.1.5.201705040741'>
       <repositories size='3'>
-        <repository location='http://download.eclipse.org/sirius/updates/releases/3.1.4/mars'/>
+        <repository location='http://download.eclipse.org/sirius/updates/releases/4.1.5/mars'/>
         <repository location='http://www.eclipse.org/modeling/amalgam/downloads/package/modeling/mars/'/>
         <repository location='http://download.eclipse.org/releases/mars/'/>
       </repositories>
     </iu>
-    <iu id='org.eclipse.sirius.samples.feature.group' name='Sirius Samples' version='3.1.4.201602091241'>
+    <iu id='org.eclipse.sirius.samples.feature.group' name='Sirius Samples' version='4.1.5.201705040741'>
       <repositories size='3'>
-        <repository location='http://download.eclipse.org/sirius/updates/releases/3.1.4/mars'/>
+        <repository location='http://download.eclipse.org/sirius/updates/releases/4.1.5/mars'/>
         <repository location='http://www.eclipse.org/modeling/amalgam/downloads/package/modeling/mars/'/>
         <repository location='http://download.eclipse.org/releases/mars/'/>
       </repositories>
     </iu>
-    <iu id='org.eclipse.sirius.specifier.feature.group' name='Sirius Specifier Environment' version='3.1.4.201602091241'>
+    <iu id='org.eclipse.sirius.specifier.feature.group' name='Sirius Specifier Environment' version='4.1.5.201705040741'>
       <repositories size='3'>
-        <repository location='http://download.eclipse.org/sirius/updates/releases/3.1.4/mars'/>
+        <repository location='http://download.eclipse.org/sirius/updates/releases/4.1.5/mars'/>
         <repository location='http://www.eclipse.org/modeling/amalgam/downloads/package/modeling/mars/'/>
         <repository location='http://download.eclipse.org/releases/mars/'/>
       </repositories>
     </iu>
-    <iu id='org.eclipse.sirius.aql.feature.group' name='Sirius Support for AQL' version='3.1.4.201602091241'>
+    <iu id='org.eclipse.sirius.aql.feature.group' name='Sirius Support for AQL' version='4.1.5.201705040741'>
       <repositories size='3'>
-        <repository location='http://download.eclipse.org/sirius/updates/releases/3.1.4/mars'/>
+        <repository location='http://download.eclipse.org/sirius/updates/releases/4.1.5/mars'/>
         <repository location='http://www.eclipse.org/modeling/amalgam/downloads/package/modeling/mars/'/>
         <repository location='http://download.eclipse.org/releases/mars/'/>
       </repositories>
