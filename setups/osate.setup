@@ -27,6 +27,17 @@
     <description>Set the heap space needed to work with the projects of ${scope.project.label}</description>
   </setupTask>
   <setupTask
+      xsi:type="setup:EclipseIniTask"
+      disabled="true"
+      option="-Doomph.redirection.osate"
+      value="=https://raw.githubusercontent.com/osate/development/master/setups/osate.setup->${git.clone.osate.development.location|uri}/setups/osate.setup"
+      vm="true">
+    <description>
+      Set an Oomph redirection system property to redirect the logical location of this setup to its physical location in the Git clone.
+      Before enabling this task, replace '...' with the repository path of this setup's containing project.
+    </description>
+  </setupTask>
+  <setupTask
       xsi:type="setup:ResourceCreationTask"
       excludedTriggers="STARTUP MANUAL"
       content="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;section name=&quot;Workbench&quot;>&#xD;&#xA;&#x9;&lt;section name=&quot;org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart&quot;>&#xD;&#xA;&#x9;&#x9;&lt;item value=&quot;true&quot; key=&quot;group_libraries&quot;/>&#xD;&#xA;&#x9;&#x9;&lt;item value=&quot;false&quot; key=&quot;linkWithEditor&quot;/>&#xD;&#xA;&#x9;&#x9;&lt;item value=&quot;2&quot; key=&quot;layout&quot;/>&#xD;&#xA;&#x9;&#x9;&lt;item value=&quot;2&quot; key=&quot;rootMode&quot;/>&#xD;&#xA;&#x9;&#x9;&lt;item value=&quot;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;&amp;#x0D;&amp;#x0A;&amp;lt;packageExplorer configured=&amp;quot;true&amp;quot; group_libraries=&amp;quot;1&amp;quot; layout=&amp;quot;2&amp;quot; linkWithEditor=&amp;quot;0&amp;quot; rootMode=&amp;quot;2&amp;quot; sortWorkingSets=&amp;quot;false&amp;quot; workingSetName=&amp;quot;&amp;quot;&amp;gt;&amp;#x0D;&amp;#x0A;&amp;lt;localWorkingSetManager&amp;gt;&amp;#x0D;&amp;#x0A;&amp;lt;workingSet editPageId=&amp;quot;org.eclipse.jdt.internal.ui.OthersWorkingSet&amp;quot; factoryID=&amp;quot;org.eclipse.ui.internal.WorkingSetFactory&amp;quot; id=&amp;quot;1382792884467_1&amp;quot; label=&amp;quot;Other Projects&amp;quot; name=&amp;quot;Other Projects&amp;quot;/&amp;gt;&amp;#x0D;&amp;#x0A;&amp;lt;/localWorkingSetManager&amp;gt;&amp;#x0D;&amp;#x0A;&amp;lt;activeWorkingSet workingSetName=&amp;quot;Other Projects&amp;quot;/&amp;gt;&amp;#x0D;&amp;#x0A;&amp;lt;allWorkingSets workingSetName=&amp;quot;Other Projects&amp;quot;/&amp;gt;&amp;#x0D;&amp;#x0A;&amp;lt;/packageExplorer&amp;gt;&quot; key=&quot;memento&quot;/>&#xD;&#xA;&#x9;&lt;/section>&#xD;&#xA;&lt;/section>&#xD;&#xA;"
@@ -37,105 +48,469 @@
   <setupTask
       xsi:type="setup:VariableTask"
       name="eclipse.target.platform"
-      value="Neon"
-      defaultValue="Neon"
+      value=""
+      defaultValue="Oxygen"
       storageURI="scope://Workspace"/>
   <setupTask
       xsi:type="setup.p2:P2Task">
-    <description>Install the tools needed in the IDE to work with the source code for ${scope.project.label}</description>
+    <requirement
+        name="org.eclipse.oomph.setup.feature.group"/>
+    <repository
+        url="${oomph.update.url}"/>
   </setupTask>
   <setupTask
-      xsi:type="git:GitCloneTask"
-      id="git.clone.osate2-core"
-      remoteURI="osate/osate2-core">
-    <annotation
-        source="http://www.eclipse.org/oomph/setup/InducedChoices">
-      <detail
-          key="inherit">
-        <value>github.remoteURIs</value>
-      </detail>
-      <detail
-          key="label">
-        <value>${scope.project.label} Github repository</value>
-      </detail>
-      <detail
-          key="target">
-        <value>remoteURI</value>
-      </detail>
-    </annotation>
-    <description>${scope.project.label}</description>
+      xsi:type="setup:VariableTask"
+      name="git.clone.location"
+      label="Git Clone Location">
+    <description>Base directory for git clone operations.</description>
   </setupTask>
   <setupTask
-      xsi:type="setup.targlets:TargletTask">
-    <targlet
-        name="${scope.project.label}"
-        activeRepositoryList="${eclipse.target.platform}">
+      xsi:type="setup:VariableTask"
+      name="osate.target.location"
+      value="/home/lw/tmp/xxx.target"/>
+  <setupTask
+      xsi:type="setup:CompoundTask"
+      id="osate2-core"
+      name="OSATE2 Core">
+    <setupTask
+        xsi:type="git:GitCloneTask"
+        id="git.clone.osate2-core"
+        location="${git.clone.location/osate/osate2-core}"
+        remoteURI="osate/osate2-core"
+        pushURI="">
+      <annotation
+          source="http://www.eclipse.org/oomph/setup/InducedChoices">
+        <detail
+            key="inherit">
+          <value>github.remoteURIs</value>
+        </detail>
+        <detail
+            key="label">
+          <value>${scope.project.label} Github repository</value>
+        </detail>
+        <detail
+            key="target">
+          <value>remoteURI</value>
+        </detail>
+      </annotation>
+      <description>Clone OSATE2 core repository</description>
+    </setupTask>
+    <setupTask
+        xsi:type="setup.p2:P2Task">
       <requirement
-          name="org.eclipse.sdk.feature.group"/>
+          name="org.eclipse.papyrus.sdk.feature.feature.group"/>
+      <requirement
+          name="org.eclipse.emf.mwe2.language.sdk.feature.group"/>
+      <requirement
+          name="org.eclipse.emf.mwe2.runtime.sdk.feature.group"/>
+      <requirement
+          name="org.eclipse.xtext.sdk.feature.group"/>
+      <requirement
+          name="de.itemis.xtext.antlr.feature.feature.group"/>
+      <requirement
+          name="org.eclipse.xtend.sdk.feature.group"/>
+      <repository
+          url="http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/oxygen"/>
+      <repository
+          url="http://download.itemis.com/updates/releases/"/>
+    </setupTask>
+  </setupTask>
+  <setupTask
+      xsi:type="setup:CompoundTask"
+      id="emv2"
+      name="Errormodel V2">
+    <setupTask
+        xsi:type="git:GitCloneTask"
+        id="git.clone.emv2"
+        location="${git.clone.location/osate/ErrorModelV2}"
+        remoteURI="osate/ErrorModelV2"
+        pushURI="">
+      <annotation
+          source="http://www.eclipse.org/oomph/setup/InducedChoices">
+        <detail
+            key="inherit">
+          <value>github.remoteURIs</value>
+        </detail>
+        <detail
+            key="label">
+          <value>${scope.project.label} Github repository</value>
+        </detail>
+        <detail
+            key="target">
+          <value>remoteURI</value>
+        </detail>
+      </annotation>
+      <description>Clone Errormodel V2 repository</description>
+    </setupTask>
+    <description></description>
+  </setupTask>
+  <setupTask
+      xsi:type="setup:CompoundTask"
+      id="osate2-plugins"
+      name="OSATE2 Plugins">
+    <setupTask
+        xsi:type="git:GitCloneTask"
+        id="git.clone.osate2-plugins"
+        location="${git.clone.location/osate/osate2-plugins}"
+        remoteURI="osate/osate2-plugins"
+        pushURI="">
+      <annotation
+          source="http://www.eclipse.org/oomph/setup/InducedChoices">
+        <detail
+            key="inherit">
+          <value>github.remoteURIs</value>
+        </detail>
+        <detail
+            key="label">
+          <value>${scope.project.label} Github repository</value>
+        </detail>
+        <detail
+            key="target">
+          <value>remoteURI</value>
+        </detail>
+      </annotation>
+      <description>Clone OSATE2 plugins repository</description>
+    </setupTask>
+  </setupTask>
+  <setupTask
+      xsi:type="setup:CompoundTask"
+      id="osate2-ba"
+      name="OSATE2 Behavior Annex">
+    <setupTask
+        xsi:type="git:GitCloneTask"
+        id="git.clone.osate2-ba"
+        location="${git.clone.location/osate/osate2-ba}"
+        remoteURI="osate/osate2-ba"
+        pushURI="">
+      <annotation
+          source="http://www.eclipse.org/oomph/setup/InducedChoices">
+        <detail
+            key="inherit">
+          <value>github.remoteURIs</value>
+        </detail>
+        <detail
+            key="label">
+          <value>OSATE2 Behavior Annex Github repository</value>
+        </detail>
+        <detail
+            key="target">
+          <value>remoteURI</value>
+        </detail>
+      </annotation>
+      <description>Clone OSATE2 behavior annex repository</description>
+    </setupTask>
+  </setupTask>
+  <setupTask
+      xsi:type="setup:CompoundTask"
+      id="osate-ge"
+      name="OSATE2 Graphical Editor">
+    <setupTask
+        xsi:type="git:GitCloneTask"
+        id="git.clone.osate-ge"
+        location="${git.clone.location/osate/osate-ge}"
+        remoteURI="osate/osate-ge"
+        pushURI="">
+      <annotation
+          source="http://www.eclipse.org/oomph/setup/InducedChoices">
+        <detail
+            key="inherit">
+          <value>github.remoteURIs</value>
+        </detail>
+        <detail
+            key="label">
+          <value>${scope.project.label} Github repository</value>
+        </detail>
+        <detail
+            key="target">
+          <value>remoteURI</value>
+        </detail>
+      </annotation>
+      <description>Clone OSATE2 graphical editor repository</description>
+    </setupTask>
+  </setupTask>
+  <setupTask
+      xsi:type="setup.targlets:TargletTask"
+      filter=""
+      programArguments=""
+      vmArguments="">
+    <targlet
+        name="OSATE2 Core"
+        activeRepositoryList="${eclipse.target.platform}">
+      <annotation
+          source="http:/www.eclipse.org/oomph/targlets/TargetDefinitionGenerator">
+        <detail
+            key="location">
+          <value>${osate.target.location}</value>
+        </detail>
+        <detail
+            key="extraUnits">
+          <value>org.eclipse.equinox.executable.feature.group</value>
+        </detail>
+        <detail
+            key="singleLocation">
+          <value>false</value>
+        </detail>
+        <detail
+            key="includeAllPlatforms">
+          <value>false</value>
+        </detail>
+        <detail
+            key="includeSource">
+          <value>true</value>
+        </detail>
+      </annotation>
+      <requirement
+          name="org.eclipse.sdk"/>
       <requirement
           name="*"/>
       <sourceLocator
-          rootFolder="${git.clone.osate.location}"
+          rootFolder="${git.clone.osate2-core.location}"
           locateNestedProjects="true"/>
       <repositoryList
           name="Oxygen">
         <repository
             url="http://download.eclipse.org/releases/oxygen"/>
-      </repositoryList>
-      <repositoryList
-          name="Neon">
         <repository
-            url="http://download.eclipse.org/releases/neon"/>
-      </repositoryList>
-      <repositoryList
-          name="Mars">
+            url="http://download.eclipse.org/eclipse/updates/4.7"/>
         <repository
-            url="http://download.eclipse.org/releases/mars"/>
-      </repositoryList>
-      <repositoryList
-          name="Luna">
+            url="http://dl.bintray.com/itemis/generic/xtext-testing/updates/"/>
         <repository
-            url="http://download.eclipse.org/releases/luna"/>
-      </repositoryList>
-      <repositoryList
-          name="Kepler">
-        <repository
-            url="http://download.eclipse.org/releases/kepler"/>
-      </repositoryList>
-      <repositoryList
-          name="Juno">
-        <repository
-            url="http://download.eclipse.org/releases/juno"/>
+            url="http://download.eclipse.org/modeling/tmf/xtext/updates/releases/2.11.0/"/>
       </repositoryList>
     </targlet>
+    <targlet
+        name="ErrorModelV2"
+        activeRepositoryList="${eclipse.target.platform}">
+      <annotation
+          source="http:/www.eclipse.org/oomph/targlets/TargetDefinitionGenerator">
+        <detail
+            key="location">
+          <value>${osate.target.location}</value>
+        </detail>
+        <detail
+            key="extraUnits">
+          <value>org.eclipse.equinox.executable.feature.group</value>
+        </detail>
+        <detail
+            key="singleLocation">
+          <value>false</value>
+        </detail>
+        <detail
+            key="includeAllPlatforms">
+          <value>false</value>
+        </detail>
+        <detail
+            key="includeSource">
+          <value>true</value>
+        </detail>
+      </annotation>
+      <requirement
+          name="org.eclipse.sdk"/>
+      <requirement
+          name="*"/>
+      <sourceLocator
+          rootFolder="${git.clone.emv2.location}"
+          locateNestedProjects="true"/>
+      <repositoryList
+          name="Oxygen">
+        <repository
+            url="http://download.eclipse.org/releases/oxygen"/>
+        <repository
+            url="http://download.eclipse.org/eclipse/updates/4.7"/>
+        <repository
+            url="http://dl.bintray.com/itemis/generic/xtext-testing/updates/"/>
+        <repository
+            url="http://download.eclipse.org/modeling/tmf/xtext/updates/releases/2.11.0/"/>
+      </repositoryList>
+    </targlet>
+    <targlet
+        name="OSATE2 Plugins"
+        activeRepositoryList="${eclipse.target.platform}">
+      <annotation
+          source="http:/www.eclipse.org/oomph/targlets/TargetDefinitionGenerator">
+        <detail
+            key="location">
+          <value>${osate.target.location}</value>
+        </detail>
+        <detail
+            key="extraUnits">
+          <value>org.eclipse.equinox.executable.feature.group</value>
+        </detail>
+        <detail
+            key="singleLocation">
+          <value>false</value>
+        </detail>
+        <detail
+            key="includeAllPlatforms">
+          <value>false</value>
+        </detail>
+        <detail
+            key="includeSource">
+          <value>true</value>
+        </detail>
+      </annotation>
+      <requirement
+          name="org.eclipse.sdk"/>
+      <requirement
+          name="*"/>
+      <sourceLocator
+          rootFolder="${git.clone.osate2-plugins.location}"
+          locateNestedProjects="true"/>
+      <repositoryList
+          name="Oxygen">
+        <repository
+            url="http://download.eclipse.org/releases/oxygen"/>
+        <repository
+            url="http://download.eclipse.org/eclipse/updates/4.7"/>
+        <repository
+            url="http://dl.bintray.com/itemis/generic/xtext-testing/updates/"/>
+        <repository
+            url="http://download.eclipse.org/modeling/tmf/xtext/updates/releases/2.11.0/"/>
+      </repositoryList>
+    </targlet>
+    <targlet
+        name="OSATE2 Behavior Annex"
+        activeRepositoryList="${eclipse.target.platform}">
+      <annotation
+          source="http:/www.eclipse.org/oomph/targlets/TargetDefinitionGenerator">
+        <detail
+            key="location">
+          <value>${osate.target.location}</value>
+        </detail>
+        <detail
+            key="extraUnits">
+          <value>org.eclipse.equinox.executable.feature.group</value>
+        </detail>
+        <detail
+            key="singleLocation">
+          <value>false</value>
+        </detail>
+        <detail
+            key="includeAllPlatforms">
+          <value>false</value>
+        </detail>
+        <detail
+            key="includeSource">
+          <value>true</value>
+        </detail>
+      </annotation>
+      <requirement
+          name="org.eclipse.sdk"/>
+      <requirement
+          name="*"/>
+      <sourceLocator
+          rootFolder="${git.clone.osate2-ba.location}"
+          locateNestedProjects="true"/>
+      <repositoryList
+          name="Oxygen">
+        <repository
+            url="http://download.eclipse.org/releases/oxygen"/>
+        <repository
+            url="http://download.eclipse.org/eclipse/updates/4.7"/>
+        <repository
+            url="http://dl.bintray.com/itemis/generic/xtext-testing/updates/"/>
+        <repository
+            url="http://download.eclipse.org/modeling/tmf/xtext/updates/releases/2.11.0/"/>
+      </repositoryList>
+    </targlet>
+    <targlet
+        name="OSATE2 Graphical Editor"
+        activeRepositoryList="${eclipse.target.platform}">
+      <annotation
+          source="http:/www.eclipse.org/oomph/targlets/TargetDefinitionGenerator">
+        <detail
+            key="location">
+          <value>${osate.target.location}</value>
+        </detail>
+        <detail
+            key="extraUnits">
+          <value>org.eclipse.equinox.executable.feature.group</value>
+        </detail>
+        <detail
+            key="singleLocation">
+          <value>false</value>
+        </detail>
+        <detail
+            key="includeAllPlatforms">
+          <value>false</value>
+        </detail>
+        <detail
+            key="includeSource">
+          <value>true</value>
+        </detail>
+      </annotation>
+      <requirement
+          name="org.eclipse.sdk"/>
+      <requirement
+          name="*"/>
+      <sourceLocator
+          rootFolder="${git.clone.osate-ge.location}"
+          locateNestedProjects="true"/>
+      <repositoryList
+          name="Oxygen">
+        <repository
+            url="http://download.eclipse.org/releases/oxygen"/>
+        <repository
+            url="http://download.eclipse.org/eclipse/updates/4.7"/>
+        <repository
+            url="http://dl.bintray.com/itemis/generic/xtext-testing/updates/"/>
+        <repository
+            url="http://download.eclipse.org/modeling/tmf/xtext/updates/releases/2.11.0/"/>
+      </repositoryList>
+    </targlet>
+    <description></description>
   </setupTask>
   <setupTask
       xsi:type="setup.workingsets:WorkingSetTask">
     <workingSet
-        name="${scope.project.name}">
+        name="osate2-core">
       <predicate
           xsi:type="predicates:AndPredicate">
         <operand
             xsi:type="predicates:RepositoryPredicate"
-            project="org.osate.oomph"/>
+            project="org.osate.core.feature"/>
+      </predicate>
+    </workingSet>
+    <workingSet
+        name="ErrorModelV2">
+      <predicate
+          xsi:type="predicates:AndPredicate">
+        <operand
+            xsi:type="predicates:RepositoryPredicate"
+            project="org.osate.xtext.aadl2.errormodel.feature"/>
+      </predicate>
+    </workingSet>
+    <workingSet
+        name="osate2-plugins">
+      <predicate
+          xsi:type="predicates:AndPredicate">
+        <operand
+            xsi:type="predicates:RepositoryPredicate"
+            project="org.osate.plugins.feature"/>
+      </predicate>
+    </workingSet>
+    <workingSet
+        name="osate2-ba">
+      <predicate
+          xsi:type="predicates:AndPredicate">
+        <operand
+            xsi:type="predicates:RepositoryPredicate"
+            project="aadlba-feature"/>
+      </predicate>
+    </workingSet>
+    <workingSet
+        name="osate-ge">
+      <predicate
+          xsi:type="predicates:AndPredicate">
+        <operand
+            xsi:type="predicates:RepositoryPredicate"
+            project="org.osate.ge.feature"/>
       </predicate>
     </workingSet>
     <description>The dynamic working sets for ${scope.project.label}</description>
   </setupTask>
   <stream name="develop"
-      label="Develop">
-    <setupTask
-        xsi:type="setup:EclipseIniTask"
-        disabled="true"
-        option="-Doomph.redirection.osate"
-        value="=https://raw.githubusercontent.com/osate/osate2-core/master/.../home/osate.setup->${git.clone.osate.location|uri}/.../home/osate.setup"
-        vm="true">
-      <description>
-        Set an Oomph redirection system property to redirect the logical location of this setup to its physical location in the Git clone.
-        Before enabling this task, replace '...' with the repository path of this setup's containing project.
-      </description>
-    </setupTask>
-  </stream>
+      label="develop"/>
   <logicalProjectContainer
       xsi:type="setup:ProjectCatalog"
       href="index:/org.eclipse.setup#//@projectCatalogs[name='com.github']"/>
