@@ -157,6 +157,8 @@
           url="http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/oxygen"/>
       <repository
           url="http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/"/>
+      <repository
+          url="http://download.itemis.com/updates/"/>
     </setupTask>
   </setupTask>
   <setupTask
