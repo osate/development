@@ -111,6 +111,29 @@
       name="osate.target.location"
       value="${git.clone.location/osate/osate2-core/org.osate.build.target/osate2-development.target}"/>
   <setupTask
+      xsi:type="setup.p2:P2Task">
+    <requirement
+        name="org.eclipse.m2m.atl.sdk.feature.group"/>
+    <requirement
+        name="org.eclipse.m2m.atl.emftvm.feature.group"/>
+    <requirement
+        name="org.eclipse.ease.feature.feature.group"/>
+    <requirement
+        name="org.eclipse.ease.ui.feature.feature.group"/>
+    <requirement
+        name="org.eclipse.ease.lang.javascript.feature.feature.group"/>
+    <requirement
+        name="org.eclipse.ease.lang.jvm.feature.feature.group"/>
+    <requirement
+        name="org.eclipse.gendoc.feature.feature.group"/>
+    <repository
+        url="https://hudson.eclipse.org/shared/job/mmt-atl-master/lastSuccessfulBuild/artifact/releng/org.eclipse.m2m.atl.update/target/repository/"/>
+    <repository
+        url="http://download.eclipse.org/ease/update/nightly"/>
+    <repository
+        url="http://download.eclipse.org/gendoc/updates/releases/0.6.0"/>
+  </setupTask>
+  <setupTask
       xsi:type="setup:CompoundTask"
       id="osate2-core"
       name="OSATE2 Core">
@@ -149,16 +172,44 @@
       <requirement
           name="de.itemis.xtext.antlr.feature.feature.group"/>
       <requirement
+          name="de.itemis.xtext.antlr.sdk.feature.group"/>
+      <requirement
           name="org.eclipse.xtend.sdk.feature.group"
           versionRange="[2.12.0,2.13.0)"/>
       <requirement
           name="org.eclipse.emf.mwe2.launcher.feature.group"/>
+      <requirement
+          name="org.eclipse.birt.feature.group"/>
+      <requirement
+          name="org.eclipse.emf.compare.ide.ui.feature.group"/>
+      <requirement
+          name="org.eclipse.emf.compare.egit.feature.group"/>
+      <requirement
+          name="org.eclipse.m2e.feature.feature.group"/>
+      <requirement
+          name="org.eclipse.m2e.logback.feature.feature.group"/>
+      <requirement
+          name="org.eclipse.swtbot.eclipse.feature.group"/>
+      <requirement
+          name="org.eclipse.wst.xml_ui.feature.feature.group"/>
+      <requirement
+          name="org.sonatype.tycho.m2e.feature.feature.group"/>
+      <requirement
+          name="de.libutzki.xtext.nodemodeloutline.feature.feature.group"/>
+      <requirement
+          name="de.libutzki.xtext.semanticmodeloutline.feature.feature.group"/>
       <repository
           url="http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/oxygen"/>
       <repository
           url="http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/"/>
       <repository
-          url="http://download.itemis.com/updates/"/>
+          url="http://download.itemis.de/updates/"/>
+      <repository
+          url="http://download.eclipse.org/releases/oxygen/201706281000"/>
+      <repository
+          url="http://repo1.maven.org/maven2/.m2e/connectors/m2eclipse-tycho/0.9.0/N/0.9.0.201609252021/"/>
+      <repository
+          url="http://xtexttools.libutzki.de/"/>
     </setupTask>
   </setupTask>
   <setupTask
@@ -273,6 +324,15 @@
       </annotation>
       <description>Clone OSATE2 graphical editor repository</description>
     </setupTask>
+    <setupTask
+        xsi:type="setup.p2:P2Task">
+      <requirement
+          name="org.eclipse.graphiti.sdk.plus.feature.feature.group"/>
+      <requirement
+          name="org.eclipse.zest.sdk.feature.group"/>
+      <repository
+          url="http://download.eclipse.org/releases/oxygen/201706281000"/>
+    </setupTask>
   </setupTask>
   <setupTask
       xsi:type="setup:CompoundTask"
@@ -340,8 +400,16 @@
         xsi:type="setup.p2:P2Task">
       <requirement
           name="it.xsemantics.sdk.feature.group"/>
+      <requirement
+          name="org.eclipse.rmf.reqif10.thirdparty.feature.feature.group"/>
+      <requirement
+          name="org.eclipse.rmf.reqif10.feature.feature.group"/>
+      <requirement
+          name="org.eclipse.rmf.reqif10.pror.feature.feature.group"/>
       <repository
           url="https://dl.bintray.com/lorenzobettini/xsemantics/updates/1.12"/>
+      <repository
+          url="http://download.eclipse.org/rmf/updates/releases"/>
     </setupTask>
   </setupTask>
   <setupTask
@@ -437,6 +505,8 @@
       <requirement
           name="org.eclipse.emf.mwe2.launcher.feature.group"/>
       <requirement
+          name="de.itemis.xtext.antlr.sdk.feature.group"/>
+      <requirement
           name="*"/>
       <sourceLocator
           rootFolder="${git.clone.osate2-core.location}"
@@ -462,11 +532,13 @@
       <repositoryList
           name="Oxygen">
         <repository
-            url="http://download.eclipse.org/releases/oxygen"/>
+            url="http://download.eclipse.org/releases/oxygen/201706281000"/>
         <repository
             url="http://download.eclipse.org/eclipse/updates/4.7"/>
         <repository
             url="http://dl.bintray.com/itemis/generic/xtext-testing/updates/"/>
+        <repository
+            url="http://download.itemis.de/updates/"/>
       </repositoryList>
     </targlet>
     <targlet
@@ -672,251 +744,6 @@
       </predicate>
     </workingSet>
     <description>The dynamic working sets for ${scope.project.label}</description>
-  </setupTask>
-  <setupTask
-      xsi:type="setup.targlets:TargletTask"
-      disabled="true"
-      filter=""
-      programArguments=""
-      vmArguments="">
-    <targlet
-        name="OSATE2 Core"
-        activeRepositoryList="${eclipse.target.platform}">
-      <annotation
-          source="http:/www.eclipse.org/oomph/targlets/TargetDefinitionGenerator">
-        <detail
-            key="location">
-          <value>${osate.target.location}</value>
-        </detail>
-        <detail
-            key="extraUnits">
-          <value>org.eclipse.equinox.executable.feature.group</value>
-        </detail>
-        <detail
-            key="singleLocation">
-          <value>false</value>
-        </detail>
-        <detail
-            key="includeAllPlatforms">
-          <value>false</value>
-        </detail>
-        <detail
-            key="includeSource">
-          <value>true</value>
-        </detail>
-      </annotation>
-      <requirement
-          name="org.eclipse.sdk"/>
-      <requirement
-          name="*"/>
-      <sourceLocator
-          rootFolder="${git.clone.osate2-core.location}"
-          locateNestedProjects="true"/>
-      <sourceLocator
-          rootFolder="${git.clone.emv2.location}"
-          locateNestedProjects="true"/>
-      <sourceLocator
-          rootFolder="${git.clone.osate2-plugins.location}"
-          locateNestedProjects="true"/>
-      <sourceLocator
-          rootFolder="${git.clone.osate2-ba.location}"
-          locateNestedProjects="true"/>
-      <sourceLocator
-          rootFolder="${git.clone.osate-ge.location}"
-          locateNestedProjects="true"/>
-      <repositoryList
-          name="Oxygen">
-        <repository
-            url="http://download.eclipse.org/releases/oxygen"/>
-        <repository
-            url="http://download.eclipse.org/eclipse/updates/4.7"/>
-        <repository
-            url="http://dl.bintray.com/itemis/generic/xtext-testing/updates/"/>
-        <repository
-            url="http://download.eclipse.org/modeling/tmf/xtext/updates/releases/2.11.0/"/>
-      </repositoryList>
-    </targlet>
-    <targlet
-        name="ErrorModelV2"
-        activeRepositoryList="${eclipse.target.platform}">
-      <annotation
-          source="http:/www.eclipse.org/oomph/targlets/TargetDefinitionGenerator">
-        <detail
-            key="location">
-          <value>${osate.target.location}</value>
-        </detail>
-        <detail
-            key="extraUnits">
-          <value>org.eclipse.equinox.executable.feature.group</value>
-        </detail>
-        <detail
-            key="singleLocation">
-          <value>false</value>
-        </detail>
-        <detail
-            key="includeAllPlatforms">
-          <value>false</value>
-        </detail>
-        <detail
-            key="includeSource">
-          <value>true</value>
-        </detail>
-      </annotation>
-      <requirement
-          name="org.eclipse.sdk"/>
-      <requirement
-          name="*"/>
-      <sourceLocator
-          rootFolder="${git.clone.emv2.location}"
-          locateNestedProjects="true"/>
-      <repositoryList
-          name="Oxygen">
-        <repository
-            url="http://download.eclipse.org/releases/oxygen"/>
-        <repository
-            url="http://download.eclipse.org/eclipse/updates/4.7"/>
-        <repository
-            url="http://dl.bintray.com/itemis/generic/xtext-testing/updates/"/>
-        <repository
-            url="http://download.eclipse.org/modeling/tmf/xtext/updates/releases/2.11.0/"/>
-      </repositoryList>
-    </targlet>
-    <targlet
-        name="OSATE2 Plugins"
-        activeRepositoryList="${eclipse.target.platform}">
-      <annotation
-          source="http:/www.eclipse.org/oomph/targlets/TargetDefinitionGenerator">
-        <detail
-            key="location">
-          <value>${osate.target.location}</value>
-        </detail>
-        <detail
-            key="extraUnits">
-          <value>org.eclipse.equinox.executable.feature.group</value>
-        </detail>
-        <detail
-            key="singleLocation">
-          <value>false</value>
-        </detail>
-        <detail
-            key="includeAllPlatforms">
-          <value>false</value>
-        </detail>
-        <detail
-            key="includeSource">
-          <value>true</value>
-        </detail>
-      </annotation>
-      <requirement
-          name="org.eclipse.sdk"/>
-      <requirement
-          name="*"/>
-      <sourceLocator
-          rootFolder="${git.clone.osate2-plugins.location}"
-          locateNestedProjects="true"/>
-      <repositoryList
-          name="Oxygen">
-        <repository
-            url="http://download.eclipse.org/releases/oxygen"/>
-        <repository
-            url="http://download.eclipse.org/eclipse/updates/4.7"/>
-        <repository
-            url="http://dl.bintray.com/itemis/generic/xtext-testing/updates/"/>
-        <repository
-            url="http://download.eclipse.org/modeling/tmf/xtext/updates/releases/2.11.0/"/>
-      </repositoryList>
-    </targlet>
-    <targlet
-        name="OSATE2 Behavior Annex"
-        activeRepositoryList="${eclipse.target.platform}">
-      <annotation
-          source="http:/www.eclipse.org/oomph/targlets/TargetDefinitionGenerator">
-        <detail
-            key="location">
-          <value>${osate.target.location}</value>
-        </detail>
-        <detail
-            key="extraUnits">
-          <value>org.eclipse.equinox.executable.feature.group</value>
-        </detail>
-        <detail
-            key="singleLocation">
-          <value>false</value>
-        </detail>
-        <detail
-            key="includeAllPlatforms">
-          <value>false</value>
-        </detail>
-        <detail
-            key="includeSource">
-          <value>true</value>
-        </detail>
-      </annotation>
-      <requirement
-          name="org.eclipse.sdk"/>
-      <requirement
-          name="*"/>
-      <sourceLocator
-          rootFolder="${git.clone.osate2-ba.location}"
-          locateNestedProjects="true"/>
-      <repositoryList
-          name="Oxygen">
-        <repository
-            url="http://download.eclipse.org/releases/oxygen"/>
-        <repository
-            url="http://download.eclipse.org/eclipse/updates/4.7"/>
-        <repository
-            url="http://dl.bintray.com/itemis/generic/xtext-testing/updates/"/>
-        <repository
-            url="http://download.eclipse.org/modeling/tmf/xtext/updates/releases/2.11.0/"/>
-      </repositoryList>
-    </targlet>
-    <targlet
-        name="OSATE2 Graphical Editor"
-        activeRepositoryList="${eclipse.target.platform}">
-      <annotation
-          source="http:/www.eclipse.org/oomph/targlets/TargetDefinitionGenerator">
-        <detail
-            key="location">
-          <value>${osate.target.location}</value>
-        </detail>
-        <detail
-            key="extraUnits">
-          <value>org.eclipse.equinox.executable.feature.group</value>
-        </detail>
-        <detail
-            key="singleLocation">
-          <value>false</value>
-        </detail>
-        <detail
-            key="includeAllPlatforms">
-          <value>false</value>
-        </detail>
-        <detail
-            key="includeSource">
-          <value>true</value>
-        </detail>
-      </annotation>
-      <requirement
-          name="org.eclipse.sdk"/>
-      <requirement
-          name="*"/>
-      <sourceLocator
-          rootFolder="${git.clone.osate-ge.location}"
-          locateNestedProjects="true"/>
-      <repositoryList
-          name="Oxygen">
-        <repository
-            url="http://download.eclipse.org/releases/oxygen"/>
-        <repository
-            url="http://download.eclipse.org/eclipse/updates/4.7"/>
-        <repository
-            url="http://dl.bintray.com/itemis/generic/xtext-testing/updates/"/>
-        <repository
-            url="http://download.eclipse.org/modeling/tmf/xtext/updates/releases/2.11.0/"/>
-      </repositoryList>
-    </targlet>
-    <description></description>
   </setupTask>
   <stream name="develop"
       label="develop"/>
