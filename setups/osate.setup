@@ -150,6 +150,32 @@
   </setupTask>
   <setupTask
       xsi:type="setup:VariableTask"
+      disabled="true"
+      filter=""
+      name="git.clone.location"
+      label="MY Git clone location rule">
+    <choice
+        value="${installation.location/git/}${@id.remoteURI|gitRepository}"
+        label="Located in a folder named 'git/&lt;repo>' within the installation folder"/>
+    <choice
+        value="${workspace.location/.git/}${@id.remoteURI|gitRepository}"
+        label="Located in a folder named '.git/&lt;repo>' within the workspace folder"/>
+    <choice
+        value="${git.container.root/}${@id.remoteURI|gitRepository}"
+        label="Located in a folder named '&lt;repo>' within the root Git-container folder "/>
+    <choice
+        value="${git.container.root/}${@id.remoteURI|gitRepository}-${@id.checkoutBranch}"
+        label="Located in a folder named '&lt;repo>-&lt;branch>' within the root Git-container folder "/>
+    <choice
+        value="${git.container.root/}${@id.remoteURI|gitRepository/}${@id.checkoutBranch}"
+        label="Located in a folder named '&lt;repo>/&lt;branch>' within the root Git-container folder "/>
+    <choice
+        value="${@id.location}"
+        label="Located in the specified absolute folder location"/>
+    <description>The rule for the absolute folder location where the Git clone is located</description>
+  </setupTask>
+  <setupTask
+      xsi:type="setup:VariableTask"
       name="osate.target.location"
       value="${git.clone.osate2-core.location/osate2-core/org.osate.build.target/osate2-development.target}"/>
   <setupTask
