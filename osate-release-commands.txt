@@ -1,0 +1,96 @@
+NEW_VERSION_NO=2.3.2
+NEW_VERSION=$NEW_VERSION_NO.vfinal
+NEXT_VERSION=2.3.3-SNAPSHOT
+
+GIT_ROOT=$HOME/git/osate
+DEVELOP_REPOS="alisa ErrorModelV2 osate2-core osate2-plugins osate2-ba osate-ge smaccm"
+MASTER_REPOS="osate2-ocarina"
+ALL_REPOS="$DEVELOP_REPOS $MASTER_REPOS"
+
+cd $GIT_ROOT
+
+# switch to master branches
+for repo in $ALL_REPOS; do echo $repo; (cd $repo && git checkout master && git pull); done
+
+# merge develop into master MANUAL
+for repo in osate2-core osate2-plugins alisa ErrorModelV2 osate2-ba; do 
+	echo $repo; (cd $repo; git merge origin/develop); 
+done
+
+# update OSATE version
+cd $GIT_ROOT/osate2-core/osate.releng
+mvn org.eclipse.tycho:tycho-versions-plugin:set-version -Dartifacts=osate2 -Dtycho.mode=maven -DnewVersion=$NEW_VERSION
+
+# set osate version maven property
+cd $GIT_ROOT/osate2-core/org.osate.build.main
+sed -i "s/<osate.version>[^<]*<\/osate.version>/<osate.version>$NEW_VERSION<\/osate.version>/" pom.xml
+
+# commit new version
+cd $GIT_ROOT
+for repo in $ALL_REPOS; do 
+	echo $repo
+	(cd $repo && git add . && git commit -m"Set OSATE version to $NEW_VERSION")
+done
+
+# new stable update site URL
+cd $GIT_ROOT/osate2-core/org.osate.build.product
+sed -i "s/osate\/testing\/updates/osate\/stable\/${NEW_VERSION_NO}\/updates/" osate.product
+
+# and commit the change
+git add osate.product
+git commit -m"Set update site to new version"
+
+# build for all platforms
+cd $GIT_ROOT/osate2-core/osate.releng
+mvn clean verify -Pfull -U -Dtycho.localArtifacts=ignore -Djgit.dirtyWorkingTree=error
+
+# copy build result to aadl.info
+TARGET_DIR=/var/www/html/aadl/osate/staging
+ssh lwrage@aadl.sei.cmu.edu "mkdir -p $TARGET_DIR/products; mkdir -p $TARGET_DIR/updates"
+
+cd $GIT_ROOT/osate2-core/org.osate.build.product/target/products
+for f in osate2-$NEW_VERSION_NO-vfinal-*; do scp $f lwrage@aadl.sei.cmu.edu:$TARGET_DIR/products/$f; done
+
+cd $GIT_ROOT/osate2-core/org.osate.build.product/target/repository
+scp -r * lwrage@aadl.sei.cmu.edu:$TARGET_DIR/updates
+
+# add git tag
+cd $GIT_ROOT
+TAG=$NEW_VERSION_NO-RELEASE
+for repo in $ALL_REPOS; do echo $repo; (cd $repo && git tag $TAG); done
+
+# push
+cd $GIT_ROOT
+for repo in $ALL_REPOS; do echo $repo; (cd $repo && git push && git push --tags); done
+
+# merge changes back into develop
+cd $GIT_ROOT
+for repo in $DEVELOP_REPOS; do echo $repo; (cd $repo && git checkout develop && git pull && git merge origin/master); done
+
+# update OSATE version
+cd $GIT_ROOT/osate2-core/osate.releng
+mvn org.eclipse.tycho:tycho-versions-plugin:set-version -Dartifacts=osate2 -Dtycho.mode=maven -DnewVersion=$NEXT_VERSION
+
+# set new snapshot version
+cd $GIT_ROOT/osate2-core/org.osate.build.main
+sed -i "s/<osate.version>[^<]*<\/osate.version>/<osate.version>$NEXT_VERSION<\/osate.version>/" pom.xml
+
+# commit new version
+cd $GIT_ROOT
+for repo in $ALL_REPOS; do 
+	echo $repo
+	(cd $repo && git add . && git commit -m"Set OSATE version to $NEXT_VERSION")
+done
+
+# new update site URL
+cd $GIT_ROOT/osate2-core/org.osate.build.product
+sed -i "s/\(osate\/\)stable\/$NEW_VERSION_NO/\1testing/" osate.product
+
+# and commit the change
+git add osate.product
+git commit -m"Set update site to testing version"
+
+# push
+cd $GIT_ROOT
+for repo in $ALL_REPOS; do echo $repo; (cd $repo && git push --follow-tags); done
+
